@@ -15,3 +15,6 @@ exclude = [
     "/.github",
     "/.vscode",
 ]
+
+[features]
+osstring = []

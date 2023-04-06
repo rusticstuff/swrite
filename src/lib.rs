@@ -1,5 +1,3 @@
-use std::ffi::OsString;
-
 #[macro_export]
 macro_rules! swrite {
     ($dst:expr, $($arg:tt)*) => {
@@ -36,7 +34,8 @@ impl SWrite for String {
     }
 }
 
-impl SWrite for OsString {
+#[cfg(feature = "osstring")]
+impl SWrite for std::ffi::OsString {
     #[inline]
     fn swrite_fmt(&mut self, fmt: std::fmt::Arguments<'_>) {
         // write_fmt() never fails for OsStrings.
@@ -49,3 +48,9 @@ impl SWrite for OsString {
         self.push("\n");
     }
 }
+
+#[cfg(test)]
+mod string_tests;
+
+#[cfg(all(test, feature = "osstring"))]
+mod osstring_tests;
