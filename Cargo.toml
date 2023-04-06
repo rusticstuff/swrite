@@ -6,7 +6,6 @@ description = "..." # TBD
 documentation = "https://docs.rs/write/"
 homepage = "https://github.com/rusticstuff/swrite"
 repository = "https://github.com/rusticstuff/swrite"
-readme = "README.md"
 keywords = [] # TBD
 categories = [] # tBD
 license = "MIT OR Apache-2.0"
