@@ -40,6 +40,6 @@ jobs:
           toolchain: nightly
       - name: Running cargo doc and cargo clippy
         run: |
-        cargo clippy --all-features -- -D warnings
-        cargo doc
+          cargo clippy --all-features -- -D warnings
+          cargo doc
 
