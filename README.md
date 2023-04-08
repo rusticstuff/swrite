@@ -8,8 +8,8 @@ The implementation uses the `SWrite` trait. It is implemented for `String`.
 With the `osstring` feature is enabled, it is also implemented for `std::ffi::OsString`.
 
 Minimum Supported Rust Version (MSRV):
-- Without `osstring` feature: 1.30.0
-- With `osstring` feature: 1.64.0
+- Without the `osstring` feature (default): 1.30.0
+- With the `osstring` feature: 1.64.0
 
 ## Usage
 
