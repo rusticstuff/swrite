@@ -34,8 +34,8 @@ Using `swrite!` and `swriteln!` with a `String`:
 use swrite::{SWrite, swrite, swriteln};
 
 let mut s = String::new();
-swrite!(s, "Hello, ");
-swriteln!(s, "world!");
+swrite!(s, "Hello, {}! ", "world");
+swriteln!(s, "The answer is {}.", 42);
 
 println!("{}", s);
 ```
@@ -43,7 +43,7 @@ println!("{}", s);
 Output:
 
 ```not_rust
-Hello, world!
+Hello, world! The answer is 42.
 ```
 
 ## License

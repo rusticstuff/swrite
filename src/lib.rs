@@ -41,7 +41,7 @@
 //! Output:
 //!
 //! ```not_rust
-//! Hello, world!
+//! Hello, world! The answer is 42.
 //! ```
 //!
 //! # License
