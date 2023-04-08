@@ -1,6 +1,6 @@
 [package]
 name = "swrite"
-version = "0.0.1"
+version = "0.0.2"
 description = "Infallible alternatives to write! and writeln! for Strings"
 documentation = "https://docs.rs/write/"
 homepage = "https://github.com/rusticstuff/swrite"

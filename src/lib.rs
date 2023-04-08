@@ -19,7 +19,7 @@
 //!
 //! ```toml
 //! [dependencies]
-//! swrite = "0.0.1"
+//! swrite = "0.0.2"
 //! ```
 //!
 //! In your Rust code:
