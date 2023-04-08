@@ -6,8 +6,8 @@ description = "..." # TBD
 documentation = "https://docs.rs/write/"
 homepage = "https://github.com/rusticstuff/swrite"
 repository = "https://github.com/rusticstuff/swrite"
-keywords = [] # TBD
-categories = [] # tBD
+keywords = [ "string", "write", "writeln", "formatting", "macro"]
+categories = [ "text-processing", "value-formatting" ]
 license = "MIT OR Apache-2.0"
 exclude = [
     "/.gitignore",
