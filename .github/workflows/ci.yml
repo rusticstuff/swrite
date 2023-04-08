@@ -23,7 +23,7 @@ jobs:
       - run: cargo test --all-features
   msrv:
     name: cargo test
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest (1.30.0)
     steps:
       - uses: actions/checkout@v3
       - uses: dtolnay/rust-toolchain@stable
