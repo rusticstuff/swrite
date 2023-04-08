@@ -1,4 +1,4 @@
-use crate::{swrite, swriteln, SWrite};
+use swrite::{swrite, swriteln, SWrite};
 
 #[test]
 fn test_swrite() {

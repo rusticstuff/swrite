@@ -49,8 +49,5 @@ impl SWrite for std::ffi::OsString {
     }
 }
 
-#[cfg(test)]
-mod string_tests;
-
 #[cfg(all(test, feature = "osstring"))]
 mod osstring_tests;
