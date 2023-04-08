@@ -1,11 +1,11 @@
 [package]
 name = "swrite"
 version = "0.0.1"
-edition = "2018"
 description = "..." # TBD
 documentation = "https://docs.rs/write/"
 homepage = "https://github.com/rusticstuff/swrite"
 repository = "https://github.com/rusticstuff/swrite"
+readme = "README.md"
 keywords = [ "string", "write", "writeln", "formatting", "macro"]
 categories = [ "text-processing", "value-formatting" ]
 license = "MIT OR Apache-2.0"

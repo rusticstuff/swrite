@@ -1,3 +1,4 @@
+extern crate swrite;
 use swrite::{swrite, swriteln, SWrite};
 
 #[test]
