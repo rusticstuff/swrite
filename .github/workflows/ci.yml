@@ -38,7 +38,7 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
         with:
           toolchain: nightly
-      - run:
-        - cargo clippy
-        - cargo doc
+      - run: |
+        cargo clippy --all-features -- -D warnings
+        cargo doc
 
