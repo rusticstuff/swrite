@@ -1,3 +1,7 @@
+//! [![CI](https://github.com/rusticstuff/swrite/actions/workflows/ci.yml/badge.svg)](https://github.com/rusticstuff/swrite/actions/workflows/ci.yml)
+//! [![crates.io](https://img.shields.io/crates/v/swrite.svg)](https://crates.io/crates/swrite)
+//! [![docs.rs](https://docs.rs/swrite/badge.svg)](https://docs.rs/swrite)
+//!
 //! `swrite` is a tiny Rust crate providing the `swrite!` and `swriteln!` macros as
 //! infallible alternatives to `write!` and `writeln!` for Strings. This is safe because
 //! writing to a String never returns `Err(_)`.
