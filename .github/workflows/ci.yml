@@ -30,7 +30,7 @@ jobs:
         with:
           toolchain: 1.30.0
       - run: cargo test
-  clippy+doc:
+  clippy-and-doc:
     name: cargo clippy / cargo doc
     runs-on: ubuntu-latest
     steps:
