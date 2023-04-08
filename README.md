@@ -1,6 +1,6 @@
 # swrite
 
-`swrite` is a tiny Rust crate providing the infallible `swrite!` and `swriteln!` macros as
+`swrite` is a tiny Rust crate providing the `swrite!` and `swriteln!` macros as
 infallible alternatives to `write!` and `writeln!` for Strings. This is safe because
 writing to a String never returns `Err(_)`.
 
