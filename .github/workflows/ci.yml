@@ -22,8 +22,8 @@ jobs:
           toolchain: ${{ matrix.toolchain }}
       - run: cargo test --all-features
   msrv:
-    name: cargo test
-    runs-on: ubuntu-latest (1.30.0)
+    name: cargo test (1.30.0)
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: dtolnay/rust-toolchain@stable
