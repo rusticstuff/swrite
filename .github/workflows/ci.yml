@@ -30,16 +30,18 @@ jobs:
         with:
           toolchain: 1.30.0
       - run: cargo test
-  clippy-and-doc:
-    name: cargo clippy / cargo doc
+  clippy-fmt-doc:
+    name: cargo fmt / cargo clippy / cargo doc
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: dtolnay/rust-toolchain@stable
         with:
           toolchain: nightly
-      - name: Running cargo doc and cargo clippy
+          components: rustfmt, clippy
+      - name: Running cargo fmt, cargo clippy and cargo doc
         run: |
+          cargo fmt -- --check
           cargo clippy --all-features -- -D warnings
-          cargo doc
+          cargo doc --all-features
 
