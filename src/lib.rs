@@ -7,7 +7,10 @@ macro_rules! swrite {
 
 #[macro_export]
 macro_rules! swriteln {
-    ($dst:expr $(,)?) => {
+    ($dst:expr) => {
+        $crate::swrite!($dst, "\n")
+    };
+    ($dst:expr,) => {
         $crate::swrite!($dst, "\n")
     };
     ($dst:expr, $($arg:tt)*) => {
