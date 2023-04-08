@@ -28,4 +28,7 @@ fn test_swriteln_empty() {
     let mut buf = String::new();
     swriteln!(buf);
     assert_eq!(buf, "\n");
+    let mut buf = String::new();
+    swriteln!(buf,);
+    assert_eq!(buf, "\n");
 }

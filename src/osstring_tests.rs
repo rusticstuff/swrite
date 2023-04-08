@@ -30,4 +30,7 @@ fn test_swriteln_empty() {
     let mut buf = OsString::new();
     swriteln!(buf);
     assert_eq!(buf, "\n");
+    let mut buf = OsString::new();
+    swriteln!(buf,);
+    assert_eq!(buf, "\n");
 }
