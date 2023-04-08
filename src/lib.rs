@@ -32,8 +32,8 @@
 //! use swrite::{SWrite, swrite, swriteln};
 //!
 //! let mut s = String::new();
-//! swrite!(s, "Hello, ");
-//! swriteln!(s, "world!");
+//! swrite!(s, "Hello, {}! ", "world");
+//! swriteln!(s, "The answer is {}.", 42);
 //!
 //! println!("{}", s);
 //! ```
@@ -48,6 +48,14 @@
 //!
 //! This project is dual-licensed under [Apache 2.0](LICENSE-APACHE) and [MIT](LICENSE-MIT) licenses.
 
+/// Write formatted text to the given `String`.
+///
+/// # Example
+/// ```
+/// use swrite::{SWrite, swrite};
+/// let mut s = String::new();
+/// swrite!(s, "The answer is {}.", 42);
+/// ```
 #[macro_export]
 macro_rules! swrite {
     ($dst:expr, $($arg:tt)*) => {
@@ -55,6 +63,14 @@ macro_rules! swrite {
     };
 }
 
+/// Write formatted text to the given `String`, followed by a newline.
+///
+/// # Example
+/// ```
+/// use swrite::{SWrite, swriteln};
+/// let mut s = String::new();
+/// swriteln!(s, "The answer is {}.", 42);
+/// ```
 #[macro_export]
 macro_rules! swriteln {
     ($dst:expr) => {
@@ -68,8 +84,23 @@ macro_rules! swriteln {
     };
 }
 
+/// Implementing this trait allows using the `swrite!` and `swriteln!` macros.
 pub trait SWrite {
+    /// Write formatted text.
+    ///
+    /// For types implementing `std::fmt::Write` this is usually done with
+    /// just a call to `std::fmt::Write::write_fmt` ignoring the result.
+    ///
+    /// Make sure that `write_fmt()` never returns `Err(_)`.
     fn swrite_fmt(&mut self, fmt: std::fmt::Arguments<'_>);
+
+    /// Write formatted text to the given `String`, followed by a newline.
+    ///
+    /// For types implementing `std::fmt::Write` this is usually done with
+    /// just a call to `std::fmt::Write::write_fmt`, followed by a type-specific
+    /// way of appending a newline.
+    ///
+    /// Make sure that `write_fmt()` never returns `Err(_)`.
     fn swrite_fmt_nl(&mut self, fmt: std::fmt::Arguments<'_>);
 }
 
