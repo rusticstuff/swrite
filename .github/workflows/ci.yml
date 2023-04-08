@@ -30,3 +30,15 @@ jobs:
         with:
           toolchain: 1.30.0
       - run: cargo test
+  clippy+doc:
+    name: cargo clippy / cargo doc
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: nightly
+      - run:
+        - cargo clippy
+        - cargo doc
+
