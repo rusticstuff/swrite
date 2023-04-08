@@ -33,25 +33,19 @@ Using `swrite!` and `swriteln!` with a `String`:
 ```rust
 use swrite::{SWrite, swrite, swriteln};
 
-fn main() {
-    let mut s = String::new();
-    swrite!(s, "Hello, ");
-    swriteln!(s, "world!");
+let mut s = String::new();
+swrite!(s, "Hello, ");
+swriteln!(s, "world!");
 
-    println!("{}", s);
-}
+println!("{}", s);
 ```
 
 Output:
 
-```
+```not_rust
 Hello, world!
 ```
 
 ## License
 
 This project is dual-licensed under [Apache 2.0](LICENSE-APACHE) and [MIT](LICENSE-MIT) licenses.
-</pre>
-
-
-
